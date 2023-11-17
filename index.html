@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c6a493ce5d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>BONAVENTURA</p>
+                <h1>A place to grow together</h1>
+            </div>
+        </div>
+    </div>
+<!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/bonaventura.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Tentang Bonaventura</h1>
+                    <p><i>Bonaventura sg</i><br>
+                        Bonaventura merupakan salah satu Kelompok kecil dalam organisasi UKMKP-FMIPA di UNIMED.
+                        Kata "Bonaventura" berasal dari Bahasa Latin di mana memiliki arti keberuntungan. Sedangkan dalam bahasa Italia Bonaventura memiliki arti 'nasib baik' yang diberikan sebagai pertanda atau nama harapan baik. Ada juga yang mengartikan kata Bonaventura adalah tidak mudah menyerah.
+                        Nama kelompok ini menggambarkan harapan kami untuk tidak pernah menyerah seperti makna dari nama yang telah kami pilih. Kelompok kecil Bonaventura memiliki pembimbing kelompok yaitu kak Desy Maibang dan tiga anggota kelompok yaitu Jeremia, Rodelta dan Erdina. Kelompok ini dibentuk pada tahun 2020 masa pandemi Covid 19 yang dimulai dengan bertemu secara daring lewat virtual meeting.</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- portofilo -->
+<div id="blog">
+    <div class="container">
+        <h1 class="sub-title">Blogs</h1>
+        <div class="blog-list">
+            <div class="blog">
+                <img src="image/social-media.jpg">
+                <div class="layer"> 
+                    <h3>Taylor, fenomena baru social media</h3>
+                    <p>Mengenal lebih dalam apa itu istilah taylor pada social media</p>
+                    <a href="./blog.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+    <div class="copyright">
+        <p>Copyright © Bonaventura.</p>
+    </div>
+</div>
+
+<script>
+        
+        let tablinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+ </script>
+
+<script>
+
+    let sidemenu = document.getElementById("sidemenu"); 
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
